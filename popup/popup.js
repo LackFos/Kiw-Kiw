@@ -12,16 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const histories = result[url.host] ?? [];
 
       if (histories.length === 0) return;
+      console.log(histories);
 
       // Render History
-      const cards = histories.map((history) => {
-        const formattedVisitedAt = new Date(history.visited_at).toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: true,
-        });
+      const cards = histories
+        .sort((a, b) => b.visitedAt - a.visitedAt)
+        .map((history) => {
+          const formattedVisitedAt = new Date(history.visitedAt).toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true,
+          });
 
-        return `
+          return `
           <div data-url="${history.url}" class="card card--row card--shadow">
             <div class="avatar">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         `;
-      });
+        });
 
       $main.innerHTML = cards.join("");
 

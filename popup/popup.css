@@ -45,7 +45,12 @@ main {
 }
 
 .card__title {
-  font-weight: bold;
+  font-weight: 500;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card__description {

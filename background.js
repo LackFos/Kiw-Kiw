@@ -21,10 +21,7 @@ chrome.history.onVisited.addListener((historyItem) => {
       const username = match ? match[1].trim() : "Error";
 
       chrome.storage.local.set({
-        [url.host]: [
-          ...histories,
-          { userId: userId, username: username, url: historyItem.url, visited_at: Date.now() },
-        ],
+        [url.host]: [...histories, { userId: userId, username: username, url: historyItem.url, visitedAt: Date.now() }],
       });
     });
   }
