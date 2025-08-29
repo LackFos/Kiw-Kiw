@@ -5,37 +5,43 @@
 }
 
 body {
-  color: white;
   font-size: 16px;
   overscroll-behavior: none;
 }
 
 main {
-  background-color: #1b1a27;
   min-width: 300px;
-  padding: 8px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .card {
-  background-color: #242433;
-  padding: 16px;
-  border: 1px solid #111111;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid #e7e8e8;
   border-radius: 16px;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card.card--row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+}
+
+.card.card--shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 -1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .card__content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .card__title {
@@ -51,11 +57,12 @@ main {
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #e7e8e8;
   border-radius: 8px;
-  background-color: #19191e;
+  background-color: #f9fafb;
 }
