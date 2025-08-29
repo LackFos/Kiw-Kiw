@@ -1,0 +1,16 @@
+{
+  "name": "Kiw Kiw",
+  "permissions": ["history", "storage", "tabs", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": "./assets/images/logo.png"
+  },
+  "background": {
+    "service_worker": "./background.js",
+    "type": "module"
+  }
+}
