@@ -13,6 +13,10 @@ body {
   padding: 16px;
 }
 
+.hide {
+  display: none !important;
+}
+
 .segmented-control {
   display: flex;
   gap: 4px;
