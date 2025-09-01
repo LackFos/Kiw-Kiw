@@ -75,15 +75,6 @@ If successful, you will see **Kiw-Kiw** appear in the extensions list.
 
 ---
 
-## 📸 Screenshot
-
-Add a screenshot here so users can better understand how the extension looks.  
-
-Example:  
-![Kiw-Kiw Screenshot](https://via.placeholder.com/600x400?text=Kiw-Kiw+Extension)  
-
----
-
 ## 🤝 Contributing
 
 Contributions are always welcome!  
