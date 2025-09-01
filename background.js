@@ -7,21 +7,26 @@ chrome.history.onVisited.addListener((historyItem) => {
   if (match) {
     const userId = match[1];
 
-    chrome.storage.local.get([url.host], async (result) => {
-      const histories = result[url.host] ?? [];
+    chrome.storage.local.get(["histories"], async (result) => {
+      const oldHistories = result?.histories?.[url.origin] ?? [];
 
-      const isHistoryExist = histories.find((history) => history.userId === userId);
+      const isHistoryExist = oldHistories.find((history) => history.userId === userId);
       if (isHistoryExist) return;
 
-      if (histories.length >= 5) histories.shift();
+      if (oldHistories.length >= 5) oldHistories.shift();
 
-      const request = await fetch(`${url.origin}/dashboard`, { credentials: "include" });
+      const request = await fetch(`${url.origin}/dashboard`);
       const body = await request.text();
       const match = body.match(/<div class="d-none d-xl-block ps-2">\s*<div>(.*?)<\/div>/);
       const username = match ? match[1].trim() : "Error";
 
+      const newHistory = { userId: userId, username: username, url: historyItem.url, visitedAt: Date.now() };
+
       chrome.storage.local.set({
-        [url.host]: [...histories, { userId: userId, username: username, url: historyItem.url, visitedAt: Date.now() }],
+        histories: {
+          ...result.histories,
+          [url.origin]: [...oldHistories, newHistory],
+        },
       });
     });
   }
