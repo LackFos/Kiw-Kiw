@@ -1,92 +1,43 @@
-# Kiw-Kiw Chrome Extension
+# Mimic: One-Click User Impersonation for Laravel Backpack
 
-Kiw-Kiw is a Chrome extension you can install directly from this GitHub repository.  
-This README will guide you step by step—from downloading, installing, to trying out the extension.
-
----
-
-## 🚀 Features
-- Easy to install without publishing on the Chrome Web Store.  
-- Can be tested right away through **Developer mode** in Chrome.  
-- Open-source code that can be modified to your needs.  
-- Provides convenient access to additional features directly in the browser.  
+Tired of manually logging in and out to test different user roles? **Mimic** is a powerful Chrome extension that streamlines your development workflow by allowing you to instantly impersonate any user in your Laravel Backpack application with a single click.
 
 ---
 
-## 📥 1. Download Repository
+## 🚀 Key Features
 
-**Option A: Clone with Git (recommended)**
-```bash
-git clone https://github.com/LackFos/Kiw-Kiw.git
-```
-
-**Option B: Download ZIP**
-1. Go to the repo page: [Kiw-Kiw](https://github.com/LackFos/Kiw-Kiw)  
-2. Click the green **Code** button → choose **Download ZIP**  
-3. Extract the ZIP file to your desired folder  
+-   **Seamless User Switching:** Log in as any user without leaving your current page.
+-   **Instant Role Testing:** Quickly verify permissions and user-specific views.
+-   **Impersonation History:** Saves your previous impersonations for quick and easy reuse.
+-   **Intuitive Interface:** A simple and clean popup to select and switch between users.
+-   **Enhanced Productivity:** Save valuable time and effort during development and testing.
 
 ---
 
-## ⚙️ 2. Open Chrome Extensions Page
+## 📥 Installation
 
-1. Open **Google Chrome**  
-2. Type in the address bar:
-   ```
-   chrome://extensions/
-   ```
-3. Press Enter → the **Extensions** page will open  
-4. Enable **Developer mode** (toggle is at the top-right corner)  
+1.  **Download:** Clone or download this repository as a ZIP file.
+2.  **Enable Developer Mode:** Open Chrome, navigate to `chrome://extensions`, and turn on "Developer mode".
+3.  **Load the Extension:** Click "Load unpacked" and select the project folder.
 
 ---
 
-## 📂 3. Load Unpacked Extension
+## 🔧 How to Use
 
-1. Click the **Load unpacked** button  
-2. Select the cloned/extracted folder (make sure it contains a `manifest.json` file)  
-3. Click **Select Folder**  
-
-If successful, you will see **Kiw-Kiw** appear in the extensions list.  
-
----
-
-## ✅ 4. Verify Installation
-
-- Ensure that the **Kiw-Kiw** extension is listed in `chrome://extensions/`  
-- If an error appears, check whether the selected folder contains `manifest.json` and other required files  
-- You can click **Details** to make sure the extension is active  
-
----
-
-## 🧪 5. Try the Extension
-
-- Once installed, Chrome will display the **Kiw-Kiw** icon in the toolbar (top right corner)  
-- Click the icon to open the popup / main function of the extension  
-- If you make changes to the code, simply click **Reload** on the `chrome://extensions/` page  
-
----
-
-## 🔧 Tips & Troubleshooting
-
-- Use the latest version of Chrome to ensure compatibility with `manifest.json`  
-- If updates don’t show up:
-  - Disable and re-enable the extension, or  
-  - Click **Reload** on the Extensions page  
-- Still having issues? Open the [Issues](https://github.com/LackFos/Kiw-Kiw/issues) section in the repo and report your problem  
+1.  Navigate to your Laravel Backpack application.
+2.  Click the **Mimic** icon in your Chrome toolbar.
+3.  Select the user you want to impersonate from the list.
+4.  Your impersonation will be saved in the history tab for later use.
+5.  To reuse a previous impersonation, simply click on it from the history list.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are always welcome!  
-If you’d like to add new features or fix bugs:  
-1. Fork this repo  
-2. Create a new branch (`git checkout -b feature-branch`)  
-3. Commit your changes (`git commit -m 'Add new feature'`)  
-4. Push to your branch (`git push origin feature-branch`)  
-5. Open a Pull Request  
+Contributions are welcome! Feel free to fork the repository, make your changes, and submit a pull request.
 
 ---
 
 ## 📜 License
-This project is licensed under the MIT License.  
-Feel free to use, modify, or contribute as you like.  
+
+This project is licensed under the MIT License.
